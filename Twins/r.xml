@@ -1,0 +1,259 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<?xml-stylesheet type='text/xsl' href='C:\ProgramData\Windows App Certification Kit\results.xsl'?>
+<REPORT OVERALL_RESULT="FAIL" VERSION="2.0.9200" TOOLSET_ARCHITECTURE="X86" SecureBoot="FALSE" APP_TYPE="WindowsStore" PUBLISHER_DISPLAY_NAME="Shahbaz Manzoor" OSVERSION="6.2.9200.0" OS="Microsoft Windows 8 Pro" PER_USER_APPLICATION="" PARTIAL_RUN="FALSE" LCID="1056" VALIDATION_TYPE="UI" ReportGenerationTime="23/11/2012 8:59:59 AM" ID="7e2f4aa6b6e909fa0299aa383e5c30e3">
+  <REQUIREMENTS>
+    <REQUIREMENT NUMBER="1" TITLE="Clean reversible install test" RATIONALE="A clean, reversible, installation allows users to successfully manage (deploy, and remove) applications on their system." />
+    <REQUIREMENT NUMBER="2" TITLE="Install to the correct folders test" RATIONALE="Windows provides specific locations in the file system to store programs and software components, shared application data, and application data specific to a user." />
+    <REQUIREMENT NUMBER="3" TITLE="Digitally signed file test" RATIONALE="An Authenticode digital signature allows users to be sure that the software is genuine. It also allows detection if a file has been tampered with e.g. infected by a virus." />
+    <REQUIREMENT NUMBER="4" TITLE="Support x64 Windows test" RATIONALE="To maintain compatibility with 64-bit versions of Windows, it is necessary that applications should natively support 64-bit or at minimum 32-bit Windows based applications to run seamlessly on 64-bit." />
+    <REQUIREMENT NUMBER="5" TITLE="OS version checking test" RATIONALE="Applications must not perform version checks for equality (== 5.1). If you need a specific feature, check whether the feature is available. If you need Windows XP, check for Windows XP or later (&gt;= 5.1), This way, your detection code will continue to work on future versions of Windows. Driver installers and uninstall modules should never check the OS version." />
+    <REQUIREMENT NUMBER="6" TITLE="User account control (UAC) test" RATIONALE="Most applications do not require administrator privileges at run time, and should be just fine running as a standard-user. Windows applications must have a manifest (embedded or external) to define its execution level that tells OS the privileges needed to run the application." />
+    <REQUIREMENT NUMBER="7" TITLE="Adhere to system restart manager messages" RATIONALE="In a critical shutdown, applications that return FALSE to WM_QUERYENDSESSION will be sent WM_ENDSESSION and closed, while those that time out in response to WM_QUERYENDSESSION will be terminated." />
+    <REQUIREMENT NUMBER="8" TITLE="Safe mode test" RATIONALE="By default, most drivers and services that did not come preinstalled with Windows are not started in Safe Mode. They should remain disabled unless they are needed for basic operations of the system or for diagnostic and recovery purposes." />
+    <REQUIREMENT NUMBER="9" TITLE="Multiuser session test" RATIONALE="Windows users should be able to run concurrent sessions without conflict or disruption.  Applications must ensure that when running in multiple sessions either locally or remotely, the normal functionality of the application should not be impacted. Application settings and data files should not be persisted across users. A user’s privacy and preferences should be isolated to the user’s session." />
+    <REQUIREMENT NUMBER="10" TITLE="Crashes and hangs test" RATIONALE="Application failures such as crashes and hangs are a major disruption to users and cause frustration. Eliminating such failures improves application stability and reliability, and overall, provides users with a better application experience.">
+      <TEST INDEX="47" NAME="App launch tests" DESCRIPTION="App launch tests." EXECUTIONTIME="00h:00m:22s.95ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="21" NAME="Crashes and hangs" DESCRIPTION="Do not crash or hang during the testing process." EXECUTIONTIME="00h:00m:07s.10ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="11" TITLE="Compatibility and resiliency test" RATIONALE="When Windows detects that an application has operated in an incompatible manner, it applies a compatibility fix that causes the application to behave correctly, ensuring a positive user experience. Applications should not rely on this behavior since it is only provided to allow legacy applications to work correctly on Windows." />
+    <REQUIREMENT NUMBER="12" TITLE="App manifest compliance test" RATIONALE="The package manifest was missing one or more required attributes.">
+      <TEST INDEX="31" NAME="App manifest" DESCRIPTION="App manifest must include valid entries for all required fields." EXECUTIONTIME="00h:00m:02s.38ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="13" TITLE="Windows security best practices test" RATIONALE="An application should not change the default Windows security settings." />
+    <REQUIREMENT NUMBER="14" TITLE="Windows security features test" RATIONALE="Applications must opt-into Windows security features.">
+      <TEST INDEX="33" NAME="Binary analyzer" DESCRIPTION="Analysis of security features enabled on binaries" EXECUTIONTIME="00h:00m:03s.52ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="15" TITLE="Supported API test" RATIONALE="The application should only refer to the APIs allowed by the Windows SDK for Windows Store Apps.">
+      <TEST INDEX="38" NAME="Supported APIs" DESCRIPTION="Windows Store App must only use supported platform APIs." EXECUTIONTIME="00h:00m:02s.92ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="17" TITLE="Performance test" RATIONALE="The application should have a fast and responsive launch and suspend experience while consuming a reasonable amount of system resources (CPU, File IO, Memory etc.) to enable fast switching and multitasking between previously unopened applications.">
+      <TEST INDEX="50" NAME="Bytecode generation" DESCRIPTION="Byte code generation should be able to complete successfully for packages containing an HTML5 Windows Store app." EXECUTIONTIME="00h:00m:01s.75ms">
+        <RESULT><![CDATA[FAIL]]></RESULT>
+        <MESSAGES>
+          <MESSAGE TEXT="This package was deployed for development or authoring mode. Uninstall the package and re-install it normally." />
+        </MESSAGES>
+      </TEST>
+      <TEST INDEX="43" NAME="Performance launch" DESCRIPTION="Application should have a responsive launch time with reasonable CPU, File IO and Memory usage" EXECUTIONTIME="00h:01m:48s.26ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="44" NAME="Performance suspend" DESCRIPTION="Application should have a responsive suspend with reasonable CPU and File IO usage" EXECUTIONTIME="00h:01m:34s.67ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="19" TITLE="App manifest resources test" RATIONALE="The Appx Package Manifest should have valid resources defined in the resources.pri file, as per the Appx Packaging Specification and Appx Manifest Schema.">
+      <TEST INDEX="45" NAME="App resources validation" DESCRIPTION="The package should have valid resources defined in the resources.pri file." EXECUTIONTIME="00h:00m:01s.18ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="20" TITLE="Debug configuration test" RATIONALE="The App should not install any debug binaries.">
+      <TEST INDEX="46" NAME="Debug configuration" DESCRIPTION="The App should not install any debug binaries." EXECUTIONTIME="00h:00m:01s.67ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="21" TITLE="File encoding" RATIONALE="Packages containing an HTML5 Windows Store app must have correct file encoding.">
+      <TEST INDEX="49" NAME="UTF-8 file encoding" DESCRIPTION="Packages containing an HTML5 Windows Store app must have correct file encoding." EXECUTIONTIME="00h:00m:01s.12ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="22" TITLE="Direct3D feature level support" RATIONALE="Applications must render content on Direct3D feature level 9.1 hardware.">
+      <TEST INDEX="51" NAME="Direct3D feature level support" DESCRIPTION="Applications must render content on Direct3D feature level 9.1 hardware." EXECUTIONTIME="00h:00m:01s.11ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="23" TITLE="App Capabilities test" RATIONALE="Packages declaring special-use capabilities will have to provide justifications during the onboarding process.">
+      <TEST INDEX="52" NAME="Special Use Capabilities" DESCRIPTION="Packages declaring special-use capabilities will have to provide justifications during the onboarding process." EXECUTIONTIME="00h:00m:01s.17ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+    <REQUIREMENT NUMBER="24" TITLE="Windows Runtime metadata validation" RATIONALE="Metadata needs to be conformant and consistent across all generation sources.">
+      <TEST INDEX="56" NAME="ExclusiveTo attribute test" DESCRIPTION="A class must not implement an interface that is marked ExclusiveTo another class." EXECUTIONTIME="00h:00m:01s.70ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="57" NAME="Type location test" DESCRIPTION="Types must be defined in the metadata file with the longest matching namespace." EXECUTIONTIME="00h:00m:00s.62ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="55" NAME="Type name case-sensitivity test" DESCRIPTION="Namespace and type names must not vary only by casing." EXECUTIONTIME="00h:00m:00s.63ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="54" NAME="Type name correctness test" DESCRIPTION="Only system types can be in the Windows namespace and no types can be in the global namespace." EXECUTIONTIME="00h:00m:00s.64ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="58" NAME="General metadata correctness test" DESCRIPTION="Metadata files must meet various requirements in order to be valid and correct." EXECUTIONTIME="00h:00m:01s.89ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+      <TEST INDEX="53" NAME="Properties test" DESCRIPTION="Write-only and indexer properties may not be used. Corresponding getter and setter methods must match in type." EXECUTIONTIME="00h:00m:00s.64ms">
+        <RESULT><![CDATA[PASS]]></RESULT>
+        <MESSAGES />
+      </TEST>
+    </REQUIREMENT>
+  </REQUIREMENTS>
+  <APPLICATIONS>
+    <Installed_Programs>
+      <Program Name="6160e488-5b78-4f50-a63b-c6b971eefa8d" Type="Application" Source="AppxPackage" Publisher="CN=Shahbaz" Version="1.0.0.0" Language="1033" OnSystemDrive="true" RootDirPath="C:\Users\Shahbaz\Documents\Visual Studio 2012\Projects\twins2\twins2\bin\Debug\AppX" PathEvidenceId="0x1b7e" RNP="0x1" DNP="0xd" EvidenceId="0x1b7e" Id="0000c8019e97aa6f3f65c8e48edbc4ec088d00000904">
+        <Indicators>
+          <DirectoryIndicators>
+            <Directory Name="game" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game" RNP="0x9" DNP="0xb" UniqueId="0x1b88" Id="00004a33de10f4458fcb05c02fba352f018b5a6d1d31" />
+            <Directory Name="appx" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx" RNP="0x9" DNP="0xb" UniqueId="0x1b7f" Id="0000b8d4f78c026c96947b228660a23786130170690d" />
+            <Directory Name="fruit" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\fruit" RNP="0x9" DNP="0xb" UniqueId="0x1b8d" Id="000040a623b7c820daa64a429040b45be07c2bc07e48" />
+            <Directory Name="howto" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\howto" RNP="0x9" DNP="0xb" UniqueId="0x1b94" Id="0000904c207f810c47f713a32b74706f506307d98fdc" />
+            <Directory Name="veg" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\veg" RNP="0x9" DNP="0xb" UniqueId="0x1b8f" Id="000002e0461c690171ad96b090a0664dfba2c97f9556" />
+            <Directory Name="js" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\js" RNP="0x9" DNP="0xb" UniqueId="0x1b83" Id="0000ed830a2cad918e620bb3cae846c3985ea8ddae26" />
+            <Directory Name="home" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\home" RNP="0x9" DNP="0xb" UniqueId="0x1b91" Id="00007eb0baafbaaf8336d49e7c3224114d4f05b6a749" />
+            <Directory Name="pages" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages" RNP="0x9" DNP="0xb" UniqueId="0x1b87" Id="000019ff601290dc13568ff4c70ea07fd47a73f13ab3" />
+            <Directory Name="cards" Path="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\cards" RNP="0x9" DNP="0xb" UniqueId="0x1b89" Id="0000001a1423e9f40c57aef67ac2f1c52f119429bf3a" />
+          </DirectoryIndicators>
+          <PackageManifestIndicator>
+            <PackageManifest PackageFullName="6160e488-5b78-4f50-a63b-c6b971eefa8d_1.0.0.0_neutral__cwm4ps5b6s6xp" />
+            <Identity Name="6160e488-5b78-4f50-a63b-c6b971eefa8d" Version="1.0.0.0" Publisher="CN=Shahbaz" ProcessorArchitecture="neutral" />
+            <Dependencies>
+              <PackageDependency Name="Microsoft.WinJS.1.0" MinVersion="1.0.8514.0" />
+            </Dependencies>
+            <Properties>
+              <DisplayName>Twins</DisplayName>
+              <PublisherDisplayName>Shahbaz Manzoor</PublisherDisplayName>
+              <Logo>images\storelogo.png</Logo>
+            </Properties>
+            <Resources>
+              <Resource Language="EN-US" />
+            </Resources>
+            <Prerequisites>
+              <OSMinVersion>6.2.1</OSMinVersion>
+              <OSMaxVersionTested>6.2.1</OSMaxVersionTested>
+            </Prerequisites>
+            <Capabilities>
+              <Capability Name="internetClient" />
+            </Capabilities>
+          </PackageManifestIndicator>
+        </Indicators>
+        <StaticProperties>
+          <Files Id="0000a53264125ece4530a95267eff003fda3cf177e79">
+            <File Name="default.js" Id="00000d9a5429b669104293c5675ea5b6bb23bd9f4d87" Size="0x707" BinaryType="UNKNOWN" Created="11/14/2012 20:05:14" Modified="11/14/2012 19:58:30" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\js\default.js" LongPathHash="00000c8814a4485a3d19883d82cbbc6527a09e0da7c2" UniqueId="0x1b84" />
+            <File Name="navigator.js" Id="0000d05a747c7319d25a9e84ea45412f109751b074a9" ShortName="NAVIGA~1.JS" Size="0x18be" BinaryType="UNKNOWN" Created="11/14/2012 20:05:14" Modified="11/14/2012 19:58:31" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\js" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\js\navigator.js" LongPathHash="000078457d5692ad94be5185a99e2f674fc95ada13a2" UniqueId="0x1b85" />
+            <File Name="cards.js" Id="000098dd35b8eb1672a6c4f12c5bf93368b41b4470f6" Size="0x115b" BinaryType="UNKNOWN" Created="11/15/2012 19:51:13" Modified="11/15/2012 20:52:15" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\game\cards" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\cards\cards.js" LongPathHash="0000f56cb0a73587cd4903e403a92ab4289d78be8805" UniqueId="0x1b8b" />
+            <File Name="jquery.js" Id="000032ef7c996de544f0d141d434028e73fcc23a7ce0" Size="0x1bce0" BinaryType="UNKNOWN" Created="11/15/2012 20:20:24" Modified="11/07/2012 04:54:35" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\game\cards" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\cards\jquery.js" LongPathHash="0000334d1a7fe1dd1a3a1d65cbd52e9ad7ce055078e1" UniqueId="0x1b8c" />
+            <File Name="fruit.html" Id="0000e4f9f931bd551bf41b218da887c1eba8b61a5bf5" ShortName="FRUIT~1.HTM" Size="0x31f" BinaryType="UNKNOWN" Created="11/16/2012 16:04:57" Modified="11/16/2012 15:38:33" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\game\fruit" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\fruit\fruit.html" LongPathHash="000056bc11be7145e86aba36333e26db098d5eeb5336" UniqueId="0x1b8e" />
+            <File Name="veg.html" Id="00003dad964f30e63701b640a717724b190ec68af6cc" ShortName="VEG~1.HTM" Size="0x31b" BinaryType="UNKNOWN" Created="11/16/2012 16:04:57" Modified="11/16/2012 15:33:54" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\game\veg" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\veg\veg.html" LongPathHash="00000ea4013e58f48c93e5da9f20cfa17b2aa2bfbf2e" UniqueId="0x1b90" />
+            <File Name="home.html" Id="0000c21935dc0700e71e52747736ec3a8d9f127c4d9c" ShortName="HOME~1.HTM" Size="0x570" BinaryType="UNKNOWN" Created="11/14/2012 20:05:14" Modified="11/16/2012 18:10:57" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\home" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\home\home.html" LongPathHash="0000667f33d7cbcf0b77ac0703892b617b1a3308a9d1" UniqueId="0x1b92" />
+            <File Name="home.js" Id="0000064043c32952708ec6af4c15d292a167c8697688" Size="0x393" BinaryType="UNKNOWN" Created="11/14/2012 20:05:14" Modified="11/14/2012 20:27:40" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\home" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\home\home.js" LongPathHash="0000d4bcd59a05ba35f6578b14aa1eaa3dd42e1aee87" UniqueId="0x1b93" />
+            <File Name="howto.html" Id="00001efd24df9b9d5a197730360689eedd3c9fb25cbb" ShortName="HOWTO~1.HTM" Size="0x4ea" BinaryType="UNKNOWN" Created="11/14/2012 20:31:51" Modified="11/16/2012 18:09:15" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\howto" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\howto\howto.html" LongPathHash="000011422420bb06cac0ea481f1ab09e0f3df8ad1456" UniqueId="0x1b95" />
+            <File Name="default.html" Id="0000dc7e1c4c1eb4bf0722bbb0ceaf3e9735edc7ecee" ShortName="DEFAUL~1.HTM" Size="0x387" BinaryType="UNKNOWN" Created="11/14/2012 20:05:14" Modified="11/14/2012 20:15:06" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\default.html" LongPathHash="00001da0cee986083845daac40f82286a28e1d04fd8e" UniqueId="0x1b80" />
+            <File Name="howto.js" Id="00004763b190718222d3cf139cb7bd7ca204e0effada" Size="0x326" BinaryType="UNKNOWN" Created="11/14/2012 20:31:51" Modified="11/14/2012 20:28:53" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\howto" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\howto\howto.js" LongPathHash="0000a28b818fe5a5c315f64585a177755ba288cf2775" UniqueId="0x1b96" />
+            <File Name="cards.html" Id="000054ace3a6f5809154fc934aee975fa2a421067559" ShortName="CARDS~1.HTM" Size="0x31f" BinaryType="UNKNOWN" Created="11/15/2012 19:51:13" Modified="11/16/2012 17:50:31" Path="c:\Users\Shahbaz\documents\visual studio 2012\Projects\twins2\twins2\bin\Debug\AppX\pages\game\cards" RNP="0xa" DNP="0x9" LowerCaseLongPath="c:\users\shahbaz\documents\visual studio 2012\projects\twins2\twins2\bin\debug\appx\pages\game\cards\cards.html" LongPathHash="0000199a93c8c564a02a2af52c56646f16c461cccf97" UniqueId="0x1b8a" />
+          </Files>
+        </StaticProperties>
+      </Program>
+    </Installed_Programs>
+  </APPLICATIONS>
+  <DEPENDENCY_INFORMATION>
+    <AitStaticAnalysis ProgramId="0000c8019e97aa6f3f65c8e48edbc4ec088d00000904" AnalysisVersion="1.54" DictionaryVersion="1.6" Type="Package" Id="6160e488-5b78-4f50-a63b-c6b971eefa8d_1.0.0.0_neutral__cwm4ps5b6s6xp">
+      <AitFile ErrorCode="0" Name="home.js" Id="0000064043c32952708ec6af4c15d292a167c8697688">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="WinJS.Utilities.query" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.js" Id="00000d9a5429b669104293c5675ea5b6bb23bd9f4d87">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Application" />
+          <AitFeature Name="WinJS.Binding.optimizeBindingReferences" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.UI.processAll" />
+          <AitFeature Name="Windows.ApplicationModel.Activation" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="howto.html" Id="00001efd24df9b9d5a197730360689eedd3c9fb25cbb">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="jquery.js" Id="000032ef7c996de544f0d141d434028e73fcc23a7ce0">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="Windows.Data.Xml.Dom.XmlDocument" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="veg.html" Id="00003dad964f30e63701b640a717724b190ec68af6cc">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="howto.js" Id="00004763b190718222d3cf139cb7bd7ca204e0effada">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.UI.Pages.define" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="cards.html" Id="000054ace3a6f5809154fc934aee975fa2a421067559">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="cards.js" Id="000098dd35b8eb1672a6c4f12c5bf93368b41b4470f6">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Navigation.navigate" />
+          <AitFeature Name="WinJS.UI.Pages.define" />
+          <AitFeature Name="WinJS.Utilities.query" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="home.html" Id="0000c21935dc0700e71e52747736ec3a8d9f127c4d9c">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="navigator.js" Id="0000d05a747c7319d25a9e84ea45412f109751b074a9">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.Class.define" />
+          <AitFeature Name="WinJS.Namespace.define" />
+          <AitFeature Name="WinJS.Navigation" />
+          <AitFeature Name="WinJS.Promise" />
+          <AitFeature Name="WinJS.Promise.as" />
+          <AitFeature Name="WinJS.Promise.timeout" />
+          <AitFeature Name="WinJS.UI.Animation.enterPage" />
+          <AitFeature Name="WinJS.UI.Pages.render" />
+          <AitFeature Name="Windows.UI.ViewManagement.ApplicationView" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="default.html" Id="0000dc7e1c4c1eb4bf0722bbb0ceaf3e9735edc7ecee">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS" />
+          <AitFeature Name="WinJS.1.0" />
+          <AitFeature Name="WinJS.UI.AppBar" />
+          <AitFeature Name="WinJS.UI.AppBarCommand" />
+        </AitCategory>
+      </AitFile>
+      <AitFile ErrorCode="0" Name="fruit.html" Id="0000e4f9f931bd551bf41b218da887c1eba8b61a5bf5">
+        <AitCategory Id="WRTJavaScript">
+          <AitFeature Name="WinJS.1.0" />
+        </AitCategory>
+      </AitFile>
+    </AitStaticAnalysis>
+  </DEPENDENCY_INFORMATION>
+</REPORT>

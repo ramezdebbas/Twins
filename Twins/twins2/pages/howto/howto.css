@@ -1,0 +1,12 @@
+﻿body{
+	background-image:url('/images/bg1.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+#content{
+	width:auto; 
+	margin-left:5%; 
+	margin-top:5%; 
+	font-size:25px;
+	color:white;
+}

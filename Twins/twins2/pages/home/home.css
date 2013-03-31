@@ -1,0 +1,38 @@
+﻿body{
+	background-image:url('/images/bg1.jpg');
+	background-size:cover;
+	background-repeat:no-repeat;
+}
+#header{
+	text-align:center;
+	background-image: url('/images/header.png');
+	background-repeat: no-repeat;
+	background-position: center top; 
+	height: 300px;
+
+}
+#menu{
+	height: 275px;
+	font-family:centaur;
+	font-size:45px;
+}
+#myList{
+	text-align:center;
+	color:#ffffff;
+	text-decoration:none;
+	list-style-type:none;	
+}
+
+a, a:visited, a:hover{
+ text-decoration:none;
+ color:#ffffff;
+}
+
+@media screen and (-ms-view-state: snapped) {
+
+}
+
+@media screen and (-ms-view-state: portrait) {
+
+    
+}
